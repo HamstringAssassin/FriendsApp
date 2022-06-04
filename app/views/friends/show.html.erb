@@ -1,0 +1,18 @@
+
+<div class="col-md-6">
+  <div class="h-100 p-5 text-dark bg-light rounded-3">
+    <h2><%= @friend.first_name  %> <%= @friend.last_name  %></h2>
+    <p>First Name: <%= @friend.first_name %></p>
+    <p>Last Name: <%= @friend.last_name %></p>
+    <p>Phone: <%= @friend.phone %></p>
+    <p>Twitter: <%= @friend.twitter %></p>
+
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-outline-dark' %> 
+    <%= link_to "Back to friends", friends_path , class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+<div>
+  
+ <p></p>
+  <%= link_to "Destroy this friend", @friend, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
